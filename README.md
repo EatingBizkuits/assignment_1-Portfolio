@@ -21,7 +21,7 @@ Exeperiences/My Life - Simple top down timeline of my educational journey: Secon
 
 Survey/Form - Simple "Talk to me" Survey where anyone can send. Picture of dog alone (send some message to me)
 
-
+notes.txt are citations!
 
 Features Left to Implement:
 I wished I had more time to do the redirect for my website. 
