@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <title>My Portfolio</title>
+
+    <!-- Importing Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- FONTS -->
+    <!--Raleway Font. Regular 400, Medium 500, Semi-bold 600, -->
+    <!--    Bold 700, Extra-Bold 800 Black 900-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+    <body>
+        <!-- Navigation Start -->
+        <header id="nav-container" class="nav-container">
+            <div class="container">
+                <div class="row spread-around-fill">
+                    <h2 class="logo-name vert-bottom"><a href="index.html" class="front">CH<span class="back">AO HAO</span></a></h2>
+                    <nav class="nav-elements">
+                        <ul>
+                            <li><a href="#intro" id="intro-sel">HOME</a></li>
+                            <li><a href="#about-me" id="about-sel">ABOUT</a></li>
+                            <li><a href="#skills-interest" id="xp-sel">EXPERIENCE</a></li>
+                            <li><a href="#survey" id="survey-sel">CONTACT ME</a></li>
+                            <div class="highlight-container">
+                                <div class="highlights-intro"></div>
+                                <div class="highlights-about-us"></div>
+                                <div class="highlights-xp"></div>
+                                <div class="highlights-survey"></div>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Navigation End -->
+
+        <!-- Introduction Section Start -->
+        <section id="intro" class="intro-sect row">
+            <div  id="intro-container" class="container">
+                <div class="row justify-left vert-middle">
+                    <div class="intro-text">
+                        <!-- Cool Line-top -->
+                        <div class="intro-line"></div>
+                        <p id="intro-name-space">Hello! I'm Chao Hao</p>
+                        <div class="container-movemint">
+                            <!-- Carousel here -->
+                            <p id="typing-carousel"><span id="im-a">I'm a</span>
+                                <span
+                                    class="txt-rotate"
+                                    data-period="2000"
+                                    data-rotate='[ "_progr@mmer()", "Leader<", "Learner>", "Gamer^","Koel Lover <3" ]'>
+
+                                </span>
+                            </p>
+                        </div>
+                        <!-- Cool Line-bottom -->
+                        <div class="intro-line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cool animated box -->
+            <div class="box-turn">
+            </div>
+            <!-- scroll down -->
+            <a href="#about-me" class="scroll-down">
+                <img src="assets/arrow-down.svg" alt="scroll-down">
+            </a>
+        </section>
+        <!-- Introduction Section End -->
+
+        <!-- About Section Start -->
+        <section class="about-section" id="about-me">
+            <div class="container">
+                <div class="row">
+
+                    <!-- About me content -->
+                    <div class="about-content">
+                        <div class="row">
+                            <div class="section-title">
+                                <h1>About Me!</h1>
+                            </div>
+                        </div>
+
+                        <p class="about-info">I am a Ngee Ann Polytechnic Student, currently studying under the school of ICT's Immersive Media Course.</p>
+						<p class="about-info">Enjoy reading, programming, 3D modelling and gaming, thus the reason for my enrollment!</p>
+                        <p class="about-info">Do look below and see some of my works!</p>
+
+                        <!-- %percentages-skills -->
+                        <div class="stats">
+                            <div class="row">
+                                <div class="skills">
+                                    <div class="progress-circle-container">
+                                        <div class="progress-circle progress-72"><span>72</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress-circle-container">
+                                        <div class="progress-circle progress-38"><span>38</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress-circle-container">
+                                        <div class="progress-circle progress-25"><span>25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-labels">
+                            <div>python</div>
+                            <div>pygame</div>
+                            <div>Maya</div>
+                        </div>
+
+                    </div>
+
+                    <!-- About me picture -->
+                    <div class="about-img">
+                        <div class="img-box">
+                            <img src="assets/fren_n_me.png" alt="me and friends!">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+
+        <section id="skills-interest">
+            <!--consider using image instead-->
+          <h2 id="Experience Title">Experience</h2>
+            <img id="newtown-image" class="xp-img" src="assets/newtownPhoto.png" alt="Time-in-NTSS">
+            <h4 id="newtown-image-text" class="xp-newtown-color">NewTown<span class="xp-newtown-uncolor">Secondary</span></h4>
+            <h5 id="newtown-duration">January 2017 - December 2020</h5>
+
+            <img id="subway-image" class="xp-img" src="assets/sundayGang.png" alt="Best-Subway-Team">
+            <h4 id="subway-image-text" class="xp-subway-color">Subway</h4>
+            <h5 id="subway-duration">November 2020 - November 2021</h5>
+
+            <img id="np-image" class="xp-img" src="assets/np.png" alt="Me-in-NP">
+            <h4 id="np-image-text" class="xp-np-color">Ngee Ann<span class="xp-np-uncolor">Polytechnic</span></h4>
+            <h5 id="np-duration">January 2017 - December 2020</h5>
+    </section>
+
+        <div id="survey">
+            <form id="get-to-know-form" action="" method="get">
+                <label id="name-label" for="name-box" class="survey-labels">Name:</label>
+                <input id="name-box" type="text" placeholder="Name" class="survey-inputs" required>
+                <span>
+                    <label id="email-label" for="email-box" class="survey-labels">Email:</label>
+                    <input id="email-box" type="text" placeholder="Email" class="survey-inputs" required>
+                </span>
+                <label id="subject-label" for="subject-box" class="survey-labels">Subject:</label>
+                <input id="subject-box" type="text" placeholder="Title" class="survey-inputs" required>
+                <label id="body-label" for="body-box" class="survey-labels">Content:</label>
+                <input id="body-box" type="text" placeholder="Talk to me!" class="survey-inputs" required>
+                <div id="button-spot">
+                    <button id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <div>Form does NOT collect anything.</div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

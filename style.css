@@ -1,0 +1,482 @@
+/*z-index tracker
+    navigation: nav-container: z-index = 99;
+    intro : intro-sect: z-index = 1;
+    intro:before : intro-sect:before = -1;*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5; /*increases space between words*/
+    background-image: linear-gradient(#3d3d57, #2b1f48);
+}
+
+/*css for fonts*/
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box; /*makes all text container take up the necessary space*/
+    margin: 0;
+}
+
+/*Common CSS*/
+.spread-around-fill {
+    justify-content: space-between;
+}
+
+.vert-middle {
+    align-items: center;
+}
+
+.vert-bottom {
+    align-items: flex-end;
+}
+
+.justify-left {
+    justify-content: flex-start;
+}
+
+/* CSS ANIMATIONS*/
+@keyframes rot-anim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/*chose wrap instead of row as it is more flexible*/
+/*plus a prep for responsiveness? Only wraps if needed*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/*Navigation*/
+
+.nav-container {
+    position: absolute; /*attached relative to ancestor(body). To change when scroll by certain amt*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.nav-container.fixed{
+    background-color: ghostwhite;
+    position: fixed
+}
+
+.container {
+    max-width: 1170px; /*By reducing the size of the box, looks centered*/
+    margin: auto;
+}
+
+/*name*/
+.logo-name {
+    padding: 0 15px 15px; /*added extra padding to allow hover stability*/
+}
+
+.logo-name a {
+    font-size:   50px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+/*color front for "CH"*/
+.logo-name a.front {
+    position: relative;
+    top: 5px;
+    color: crimson;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+/*color back for "AO HAO"*/
+.logo-name span.back {
+    position: relative;
+    top: -7px;
+    font-size: 40px;
+    color: white;
+    text-shadow: none;
+    transition: all 0.6s ease;
+}
+
+.nav-container.fixed .logo-name span.back {
+    position: relative;
+    top: -7px;
+    font-size: 40px;
+    color: ghostwhite;
+    text-shadow: none;
+    transition: all 0.6s ease;
+}
+
+.logo-name span.back:before{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 170px;
+    height: 3px;
+    background-color: ghostwhite;
+    border-radius: 60px;
+}
+
+/*the selection List (outer)*/
+.nav-elements {
+    padding: 0 15px;
+}
+
+/*the selection List (inner)*/
+.nav-elements ul {
+    /*removes dot in uls. IMPORTANT to remember!*/
+    list-style: none;
+
+    /*makes elements only cover needed area, preps for inline-block*/
+    margin: 0;
+    padding: 0;
+}
+
+/*respective list element containers*/
+.nav-elements ul li {
+    display: inline-block;
+    /*using inline block turns block elements into inline(area that margin/padding covers which is 0).*/
+    margin-left: 30px;
+}
+
+/*words inside li elements*/
+.nav-elements ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    /*top-down, left-right*/
+    padding: 25px 0 0;
+    display: block;
+}
+
+.nav-container.fixed .nav-elements ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: navy;
+    /*top-down, left-right*/
+    padding: 25px 0 0;
+    display: block;
+}
+
+.highlight-container{
+    width: 400px;
+}
+
+/*underline under nav options*/
+.highlights-intro, .highlights-about-us, .highlights-xp, .highlights-survey{
+    position: relative;
+    background-color: navy;
+    height: 3px;
+    border-radius: 60px;
+    transition: all 0.3s ease-in-out;
+    width: 0;
+}
+
+.highlights-intro {
+    left: 35px;
+}
+
+.highlights-about-us {
+    left: 115px;
+    top: -3px;
+}
+
+.highlights-xp {
+    left: 205px;
+    top: -6px;
+}
+
+.highlights-survey {
+    left: 335px;
+    top: -9px;
+}
+
+/*Introduction*/
+
+/*image*/
+.intro-sect {
+    min-height: 100vh;
+    background-image: url("assets/intro-img.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+/*shade on top of image*/
+.intro-sect:before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+div.box-turn{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border:5px solid orange;
+    right: 15%;
+    top:15%;
+    animation:rot-anim 5s linear infinite;
+}
+
+.intro-sect.row{
+    min-height: 100vh;
+}
+
+.intro-text{
+    color: white;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/*Hello! I'm ChaoHao*/
+p#intro-name-space{
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/*I'm a + Typing Carousel*/
+.container-movemint{
+    position: absolute;
+    /*makes carousel para stay in place*/
+    font-weight: 900;
+}
+
+/*tying carousel*/
+p#typing-carousel span.txt-rotate {
+    position: relative;
+    left: 20px;
+    /*offset by +5px to make space b/w I'm a and carousel*/
+    font-size: 60px;
+}
+
+/*I'm a*/
+#im-a{
+    position: relative;
+    left: 15px;
+    /*offset to no overlap*/
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.intro-line{
+    display: inline-flex;
+    postion: relative;
+    width: 6px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 60px;
+}
+
+.scroll-down{
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    height: 70px;
+    width: 70px;
+    margin-left: -15px;
+    animation: scroll-down 2s ease infinite;
+}
+
+@keyframes scroll-down{
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%{
+        transform:translateY(-30px);
+    }
+    60%{
+        transform:translateY(-15px);
+    }
+}
+
+.scroll-down img{
+    width: 25px;
+    display: block;
+}
+
+
+/*ABOUT PAGE*/
+
+.section-title{
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+}
+
+.section-title h1{
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    top: 25px;
+}
+
+.section-title h1:before{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 80px;
+    height: 3px;
+    background-color: orange;
+}
+
+.about-section{
+    padding: 80px 0;
+}
+
+.about-section .about-img {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0 15px;
+}
+
+.about-section .about-img .img-box img{
+    border: 6px solid white;
+    border-radius: 60px;
+    width: 100%;
+    display: block;
+}
+
+.about-section .about-content{
+    flex: 0 0 40%;
+    text-align: right;
+    max-width: 40%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about-section .section-title{
+    margin-bottom: 50px;
+}
+
+.about-section .about-content p{
+    font-size: 16px;
+    color: white;
+    line-height: 26px;
+    margin: 0;
+}
+
+/*%percentage skills*/
+
+.stats{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Base Circle*/
+.skills .progress-circle {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: ghostwhite;
+}
+
+.skills .progress-circle:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/*Innermost circle, divider for gray and white background*/
+.skills .progress-circle span {
+    font-size: 1rem;
+    color: gray;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+}
+
+
+/*gives text properties*/
+.skills .progress-circle span:after {
+    content: "%";
+    font-weight: 600;
+    color: gray;
+}
+
+/*bar*/
+.skills .progress-circle.progress-25:after {
+    background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent),
+    linear-gradient(180deg, darkred 50%, ghostwhite 50%, ghostwhite);
+}
+
+.skills .progress-circle.progress-38:after {
+    background-image: linear-gradient(90deg, ghostwhite 50%, transparent 50%, transparent),
+    linear-gradient(226.8deg, mediumpurple 50%, ghostwhite 50%, ghostwhite);
+}
+
+.skills .progress-circle.progress-72:after {
+    background-image: linear-gradient(-10.8deg, cornflowerblue 50%, transparent 50%, transparent),
+    linear-gradient(270deg, cornflowerblue 50%, ghostwhite 50%, ghostwhite);
+}
+
+/*labels*/
+
+.stat-labels {
+    position: relative;
+    left: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.stat-labels div{
+    color: white;
+}
