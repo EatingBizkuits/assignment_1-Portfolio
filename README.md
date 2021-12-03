@@ -2,6 +2,8 @@
 
 ## Design Process
 
+My Website: https://eatingbizkuits.github.io/assignment_1-Portfolio/
+
 As a student, I want employers and friends to see it, so that they can get to know me better.
 This webpage was inspired by a senior and some paper sketches were done, but I lost it in the end. (So sorry) 
 
