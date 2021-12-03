@@ -1,2 +1,7 @@
 wheel reference: https://codepen.io/umangollosoft/pen/oaKyEm
+
 nav-reference: https://www.youtube.com/watch?v=gXkqy0b4M5g
+
+chess-dog-img: https://www.reddit.com/r/aww/comments/nfjo1i/perfect_chess_board_doesnt_exi/?utm_source=share&utm_medium=web2x&context=3
+
+css-rotate animation: https://codepen.io/vitoralberto/pen/OPYyYB

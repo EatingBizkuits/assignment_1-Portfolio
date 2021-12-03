@@ -4,32 +4,28 @@ $(document).ready(function() {
     // FOR NAME
 
     //GENERALLY, for HEADER, if there is hover, css style changes applied
-    $("h2.logo-name, h2.logo-name a, span.back").mouseover(function () {
-        $("a.front, span.back").css("color", "#3d3d57");
-        $("a.front, span.back").css("text-shadow", "-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white");
-        $("span.back").css("top", "-1px");
-        $("span.back").css("left", "2px");
-        $("a.front, span.back").css("font-size", "50px");
-    });
+    function hoverChange() {
+        $("a.front, span.back").css("color", "#3d3d57")
+                                .css("font-size", "50px")
+                                .css("text-shadow", "-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white");
+        $("span.back").css("top", "-1px").css("left", "2px");
+    }
 
-    $("h2.logo-name, h2.logo-name a, span.back").mouseout(function () {
-        $("a.front").css("color", "crimson");
-        $("a.front").css("text-shadow", "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black");
-        $("a.front").css("font-size", "50px");
-        $("a.front").css("top", "5px");
-        $("span.back").css("color", "ghostwhite");
-        $("span.back").css("text-shadow", "none");
-        $("span.back").css("font-size", "40px");
-        $("span.back").css("top", "-7px");
-        $("a.front, span.back").css("left", "0");
-    });
+    //removes all applied attributes when unhovered
+    function hoverRevert() {
+        $("a.front, span.back").removeAttr("style")
+    }
+
+
+    $("h2.logo-name, h2.logo-name a, span.back").mouseover(hoverChange).mouseout(hoverRevert);
+
 
     //STICK NAVBAR
     $(window).scroll(function(){
        if ($(this).scrollTop() > 100) {
-           $(".nav-container").addClass("fixed")
+           $(".nav-container").addClass("sticky")
        } else {
-           $(".nav-container").removeClass("fixed")
+           $(".nav-container").removeClass("sticky")
        }
     });
 
@@ -37,33 +33,28 @@ $(document).ready(function() {
     // FOR NAVIGATION OPTIONS
     $("div.highlights-intro, a#intro-sel").mouseover(function () {
         $("div.highlights-intro").css("width", "40px");
-    });
-
-    $("div.highlights-intro, a#intro-sel").mouseout(function () {
+    }).mouseout(function () {
         $("div.highlights-intro").css("width", "0");
     });
 
+
     $("div.highlights-about-us, a#about-sel").mouseover(function () {
         $("div.highlights-about-us").css("width", "46px");
-    });
-
-    $("div.highlights-about-us, a#about-sel").mouseout(function () {
+    }).mouseout(function () {
         $("div.highlights-about-us").css("width", "0");
     });
 
-    $("div.highlights-xp, a#xp-sel").mouseover(function () {
-        $("div.highlights-xp").css("width", "90px");
-    });
 
-    $("div.highlights-xp, a#xp-sel").mouseout(function () {
+    $("div.highlights-xp, a#xp-sel").mouseover(function () {
+        $("div.highlights-xp").css("width", "60px");
+    }).mouseout(function () {
         $("div.highlights-xp").css("width", "0");
     });
 
+
     $("div.highlights-survey, a#survey-sel").mouseover(function () {
         $("div.highlights-survey").css("width", "100px");
-    });
-
-    $("div.highlights-survey, a#survey-sel").mouseout(function () {
+    }).mouseout(function () {
         $("div.highlights-survey").css("width", "0");
     });
 });
@@ -71,7 +62,7 @@ $(document).ready(function() {
 
 // INTRO
 
-//Typing Carousel
+//Typing Carousel -> javascript
 let TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -154,4 +145,9 @@ window.onload = function() {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
 };
+
+function qs(selector, all = false) {
+    return all ? document.querySelectorAll(selector) : document.querySelector(selector)
+}
+
 

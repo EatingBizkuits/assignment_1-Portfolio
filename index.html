@@ -23,22 +23,22 @@
     <body>
         <!-- Navigation Start -->
         <header id="nav-container" class="nav-container">
-            <div class="container">
+            <div id="present" class="container">
                 <div class="row spread-around-fill">
-                    <h2 class="logo-name vert-bottom"><a href="index.html" class="front">CH<span class="back">AO HAO</span></a></h2>
+                    <h2 id="logo" class="logo-name vert-bottom"><a href="index.html" class="front">CH<span class="back">AO HAO</span></a></h2>
                     <nav class="nav-elements">
                         <ul>
                             <li><a href="#intro" id="intro-sel">HOME</a></li>
                             <li><a href="#about-me" id="about-sel">ABOUT</a></li>
-                            <li><a href="#skills-interest" id="xp-sel">EXPERIENCE</a></li>
+                            <li><a href="#experiences" id="xp-sel">MY-LIFE</a></li>
                             <li><a href="#survey" id="survey-sel">CONTACT ME</a></li>
-                            <div class="highlight-container">
-                                <div class="highlights-intro"></div>
-                                <div class="highlights-about-us"></div>
-                                <div class="highlights-xp"></div>
-                                <div class="highlights-survey"></div>
-                            </div>
                         </ul>
+                        <div class="highlight-container">
+                            <div class="highlights-intro"></div>
+                            <div class="highlights-about-us"></div>
+                            <div class="highlights-xp"></div>
+                            <div class="highlights-survey"></div>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -118,61 +118,157 @@
 
                         <div class="stat-labels">
                             <div>python</div>
-                            <div>pygame</div>
+                            <div>
+                                <div>javascript</div>
+                            </div>
                             <div>Maya</div>
                         </div>
-
                     </div>
 
                     <!-- About me picture -->
                     <div class="about-img">
                         <div class="img-box">
                             <img src="assets/fren_n_me.png" alt="me and friends!">
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
         <!-- About Section End -->
 
-        <section id="skills-interest">
-            <!--consider using image instead-->
-          <h2 id="Experience Title">Experience</h2>
-            <img id="newtown-image" class="xp-img" src="assets/newtownPhoto.png" alt="Time-in-NTSS">
-            <h4 id="newtown-image-text" class="xp-newtown-color">NewTown<span class="xp-newtown-uncolor">Secondary</span></h4>
-            <h5 id="newtown-duration">January 2017 - December 2020</h5>
+        <!-- TimeLine/ My life Section Start
+        Look at the UWU face (somewhat) -->
+        <section id="experiences">
+            <div class="xp-container">
+                <div class="top-section section-title">
+                    <h1>eXperiences</h1>
+        <!--uwu--></div>
 
-            <img id="subway-image" class="xp-img" src="assets/sundayGang.png" alt="Best-Subway-Team">
-            <h4 id="subway-image-text" class="xp-subway-color">Subway</h4>
-            <h5 id="subway-duration">November 2020 - November 2021</h5>
+                <div class="timeline">
+                    <div class="ntss-line"></div>
+                    <div class="sub-line"></div>
+                    <div class="np-line"></div>
+                    <div class="line">
+                        <div class="section">
+                            <div class="content">
+                                <h2 class="timeline-words">New Town Secondary</h2>
+                                <p>January 2017 - December 2020</p>
+                                <div class="ntss img-box-xp"></div>
+                            </div>
+                        </div>
 
-            <img id="np-image" class="xp-img" src="assets/np.png" alt="Me-in-NP">
-            <h4 id="np-image-text" class="xp-np-color">Ngee Ann<span class="xp-np-uncolor">Polytechnic</span></h4>
-            <h5 id="np-duration">January 2017 - December 2020</h5>
-    </section>
+                        <div class="section">
+                            <div class="content select">
+                                <h2 class="timeline-words select">Subway</h2>
+                                <p>November 2020 - November 2021</p>
+                                <div class="sub img-box-xp-section"></div>
+                            </div>
+                        </div>
 
-        <div id="survey">
-            <form id="get-to-know-form" action="" method="get">
-                <label id="name-label" for="name-box" class="survey-labels">Name:</label>
-                <input id="name-box" type="text" placeholder="Name" class="survey-inputs" required>
-                <span>
-                    <label id="email-label" for="email-box" class="survey-labels">Email:</label>
-                    <input id="email-box" type="text" placeholder="Email" class="survey-inputs" required>
-                </span>
-                <label id="subject-label" for="subject-box" class="survey-labels">Subject:</label>
-                <input id="subject-box" type="text" placeholder="Title" class="survey-inputs" required>
-                <label id="body-label" for="body-box" class="survey-labels">Content:</label>
-                <input id="body-box" type="text" placeholder="Talk to me!" class="survey-inputs" required>
-                <div id="button-spot">
-                    <button id="submit">Submit</button>
+            <!--uwu  temp--><div class="section">
+                            <div class="content">
+                                <h2 class="timeline-words">Ngee Ann Polytechnic</h2>
+                                <p>April 2021 - Present</p>
+                                <div class="np img-box-xp"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circle"></div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </section>
+        <!-- TimeLine/ My life Section End -->
 
+
+        <!-- contact-start -->
+        <section id="survey" class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-img">
+                        <div class="img-box">
+                            <div class="img-content-form">
+                                <div class="section-title">
+                                    <h1>Talk to me!</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-form">
+                        <form class="form">
+
+                            <div class="row">
+                                <div class="left input-group">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" placeholder="Your Name Here"
+                                    class="input-control">
+                                </div>
+
+                                <div class="right input-group">
+                                    <label for="email">Email or Phone</label>
+                                    <input id="email" type="text" placeholder="Your Email or Phone Here"
+                                    class="input-control">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-group">
+                                    <label id="message-label" id="message-label" for="message">Message to me</label>
+                                    <textarea id="message" class="input-control"
+                                    placeholder="Your Message Here"></textarea>
+                                </div>
+                            </div>
+
+                            <div id="submit-btn">
+                                <div class="form-btn">
+                                    <button type="button" class="btn">Let me Read!</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="contact-info">
+                        <div class="row">
+                            <!-- Address start -->
+                            <div class="info-item">
+                                <h5>Address</h5>
+                                <p>Singapore 123456</p>
+                            </div>
+                            <!-- Address end -->
+                            <!-- PhoneNumber item start -->
+                            <div class="info-item">
+                                <h5>Phone</h5>
+                                <p>+65 9876 5432</p>
+                            </div>
+                            <!-- PhoneNumber item end -->
+                            <!-- Email item start -->
+                            <div class="info-item">
+                                <h5>Email</h5>
+                                <p>chaohao.here@gmail.com</p>
+                            </div>
+                            <!-- Email item end -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="social-links">
+                        <a class="logo-edit" href="#" title="gmail"><img src="assets/Gmail-logo.png" alt="gmail"></a>
+                        <a href="#" title="linkedin"><img src="assets/LinkedIn-Logo.png" alt="linkedin"></a>
+                        <a href="#" title="instagram"><img src="assets/Instagram-Logo.png" alt="instagram"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- copyright text -->
         <footer>
-            <div>Form does NOT collect anything.</div>
+            <p class="bottom">a website by ChaoHao</p>
         </footer>
 
         <script src="script.js"></script>
